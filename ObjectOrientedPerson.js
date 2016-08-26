@@ -53,24 +53,22 @@ function Teacher () { //class
 
 function printWarriors(_passedInValue) {
   console.log("");
-  console.log("Person name = " + _passedInValue.person.name);
-  console.log("Person height = " + _passedInValue.person.height);
-  console.log("Person hair color = " + _passedInValue.person.hairColor);
-  console.log("Person sex = " + _passedInValue.person.sex);
-  console.log("Person eye color = " + _passedInValue.person.eyeColor);
+  console.log("Person Name = " + _passedInValue.person.name);
+  console.log("Person Occupation = " + _passedInValue.person.occupation);
+  console.log("Person Height = " + _passedInValue.person.height);
+  console.log("Person Hair Color = " + _passedInValue.person.hairColor);
+  console.log("Person Sex = " + _passedInValue.person.sex);
+  console.log("Person Eye Color = " + _passedInValue.person.eyeColor);
 
-  if (_passedInValue.weapon) {
-    console.log("Person is a warrior!");
-    console.log("Warrior weapon = " + _passedInValue.weapon);
-  } else if (_passedInValue.classroom) {
-    console.log("Person is a Teacher!");
-    console.log("Teacher classroom = " + _passedInValue.classroom);
+  if (_passedInValue.person.occupation = "Teacher") {
+    console.log("This person teaches = " + _passedInValue.person.accessory);
+  } else if (_passedInValue.person.occupation = "Warrior") {
+    console.log("This fights with a = " + _passedInValue.person.accessory);
   }
 }
 
 var myWarrior = new Warrior();
-myWarrior.person.setValues("Zorro", 10, "Red", "Male", "Brown");
-myWarrior.weapon = "Whip";
+myWarrior.person.setValues("Zorro", "Warrior", 10, "Red", "Male", "Brown", "ECON 101");
 printWarriors(myWarrior);
 
 var myTeacher = new Teacher();

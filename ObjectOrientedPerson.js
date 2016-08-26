@@ -25,30 +25,30 @@ console.log("Welcome to the object oriented warrior example");
 
 function Person () { //class
   this.name = "default name";
+  this.occupation = "default occupation";
   this.height = "default height";
   this.hairColor;
   this.sex;
   this.eyeColor;
-  this.accessory = "default";
+  this.accessory;
 
-  this.setValues = function (_name, _height, _hairColor, _sex, _eyeColor, _accessory) {
+  this.setValues = function (_name, _occupation, _height, _hairColor, _sex, _eyeColor, _accessory) {
     this.name = _name;
+    this.occupation = _occupation;
     this.height = _height;
     this.hairColor = _hairColor;
     this.sex = _sex;
     this.eyeColor = _eyeColor;
-    this.accessory = _accessory
+    this.accessory = _accessory;
   }
 }
 
 function Warrior () { //class
   this.person = new Person();
-  this.weapon = "default weapon";
 }
 
 function Teacher () { //class
   this.person = new Person();
-  this.classroom = "default classroom";
 }
 
 function printWarriors(_passedInValue) {
@@ -58,7 +58,6 @@ function printWarriors(_passedInValue) {
   console.log("Person hair color = " + _passedInValue.person.hairColor);
   console.log("Person sex = " + _passedInValue.person.sex);
   console.log("Person eye color = " + _passedInValue.person.eyeColor);
-  console.log("This person has a = " + _passedInValue.person.accessory);
 
   if (_passedInValue.weapon) {
     console.log("Person is a warrior!");
@@ -70,7 +69,7 @@ function printWarriors(_passedInValue) {
 }
 
 var myWarrior = new Warrior();
-myWarrior.person.setValues("Zorro", 10, "Red", "Male", "Brown", "Doodoo");
+myWarrior.person.setValues("Zorro", 10, "Red", "Male", "Brown");
 myWarrior.weapon = "Whip";
 printWarriors(myWarrior);
 

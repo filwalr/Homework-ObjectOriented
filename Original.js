@@ -29,6 +29,9 @@ function Person () { //class
   this.hairColor;
   this.sex;
   this.eyeColor;
+  this.accessory = function (){
+    return this.weapon;
+  };
 
   this.setValues = function (_name, _height, _hairColor, _sex, _eyeColor) {
     this.name = _name;

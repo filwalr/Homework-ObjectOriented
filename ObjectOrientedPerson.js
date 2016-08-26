@@ -29,13 +29,15 @@ function Person () { //class
   this.hairColor;
   this.sex;
   this.eyeColor;
+  this.accessory = "default";
 
-  this.setValues = function (_name, _height, _hairColor, _sex, _eyeColor) {
+  this.setValues = function (_name, _height, _hairColor, _sex, _eyeColor, _accessory) {
     this.name = _name;
     this.height = _height;
     this.hairColor = _hairColor;
     this.sex = _sex;
     this.eyeColor = _eyeColor;
+    this.accessory = _accessory
   }
 }
 
@@ -56,6 +58,7 @@ function printWarriors(_passedInValue) {
   console.log("Person hair color = " + _passedInValue.person.hairColor);
   console.log("Person sex = " + _passedInValue.person.sex);
   console.log("Person eye color = " + _passedInValue.person.eyeColor);
+  console.log("This person has a = " + _passedInValue.person.accessory);
 
   if (_passedInValue.weapon) {
     console.log("Person is a warrior!");
@@ -67,7 +70,7 @@ function printWarriors(_passedInValue) {
 }
 
 var myWarrior = new Warrior();
-myWarrior.person.setValues("Zorro", 10, "Red", "Male", "Brown");
+myWarrior.person.setValues("Zorro", 10, "Red", "Male", "Brown", "Doodoo");
 myWarrior.weapon = "Whip";
 printWarriors(myWarrior);
 

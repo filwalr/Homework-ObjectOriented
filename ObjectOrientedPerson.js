@@ -27,7 +27,7 @@ function Person () { //class
   this.name = "default name";
   this.occupation = "default occupation";
   this.height = "default height";
-  this.hairColor;
+  this.hairColor; 
   this.sex;
   this.eyeColor;
   this.accessory;
